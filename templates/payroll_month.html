@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}Зарплата: {{ month_name }}{% endblock %}
+
+{% block content %}
+<div class="w-full py-8 px-4">
+  <h2 class="text-2xl font-semibold mb-6">Зарплата за {{ month_name }}</h2>
+
+  <form method="post" action="{{ url_for('payroll_month', month=month) }}">
+    <div class="overflow-x-auto bg-white rounded-lg shadow">
+      <table class="w-full text-sm">
+        <thead class="bg-gray-100 text-xs uppercase text-gray-600">
+          <tr>
+            <th class="p-3 text-left w-[20%]">ФИО</th>
+            <th class="p-3 text-left w-[15%]">Вид выплаты</th>
+            <th class="p-3 text-right w-[10%]">Оклад</th>
+            <th class="p-3 text-right w-[10%]">Кол-во дней</th>
+            <th class="p-3 text-right w-[10%]">Премия</th>
+            <th class="p-3 text-right w-[10%]">Сумма</th>
+            <th class="p-3 text-center w-[5%]">Удалить</th>
+          </tr>
+        </thead>
+        <tbody id="payroll-body">
+          {% for row in rows %}
+          <tr class="border-t text-sm">
+            <td class="p-2"><input type="text" name="fio_{{ loop.index }}" value="{{ row.fio }}" class="w-full border px-2 py-1 rounded"></td>
+            <td class="p-2">
+              <select name="type_{{ loop.index }}" class="w-full border px-2 py-1 rounded">
+                <option value="Kaspi Bank" {% if row.type == 'Kaspi Bank' %}selected{% endif %}>Kaspi Bank</option>
+                <option value="Halyk Bank" {% if row.type == 'Halyk Bank' %}selected{% endif %}>Halyk Bank</option>
+                <option value="Наличные" {% if row.type == 'Наличные' %}selected{% endif %}>Наличные</option>
+              </select>
+            </td>
+            <td class="p-2 text-right"><input type="number" name="oklad_{{ loop.index }}" value="{{ row.oklad }}" class="w-full border px-2 py-1 rounded text-right"></td>
+            <td class="p-2 text-right"><input type="number" name="days_{{ loop.index }}" value="{{ row.days }}" class="w-full border px-2 py-1 rounded text-right"></td>
+            <td class="p-2 text-right"><input type="number" name="bonus_{{ loop.index }}" value="{{ row.bonus }}" class="w-full border px-2 py-1 rounded text-right"></td>
+            <td class="p-2 text-right total-cell">{{ row.total }} ₸</td>
+            <td class="p-2 text-center"><button type="button" onclick="removeRow(this)" class="text-gray-500 hover:text-red-600 font-bold text-xl">×</button></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flex justify-between items-center mt-6">
+      <div class="text-lg font-medium">Общая сумма: <span id="grand-total">{{ total_all }} ₸</span></div>
+      <div class="flex gap-4 flex-wrap justify-end">
+        <a href="{{ url_for('payroll_home') }}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-5 py-2 rounded-lg">← Назад</a>
+        <button type="button" onclick="addPayrollRow()" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg">Добавить сотрудника</button>
+        <a href="{{ url_for('export_payroll_excel', month=month) }}" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg">Выгрузить в Excel</a>
+        <button type="submit" onclick="recalculateTotals()" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg">Сохранить</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+let rowIndex = {{ rows|length + 1 }};
+function addPayrollRow() {
+  const body = document.getElementById('payroll-body');
+  const tr = document.createElement('tr');
+  tr.className = 'border-t';
+  tr.innerHTML = `
+    <td class="p-2"><input type="text" name="fio_${rowIndex}" class="w-full border px-2 py-1 rounded"></td>
+    <td class="p-2">
+      <select name="type_${rowIndex}" class="w-full border px-2 py-1 rounded">
+        <option value="Kaspi Bank">Kaspi Bank</option>
+        <option value="Halyk Bank">Halyk Bank</option>
+        <option value="Наличные">Наличные</option>
+      </select>
+    </td>
+    <td class="p-2 text-right"><input type="number" name="oklad_${rowIndex}" class="w-full border px-2 py-1 rounded text-right"></td>
+    <td class="p-2 text-right"><input type="number" name="days_${rowIndex}" class="w-full border px-2 py-1 rounded text-right"></td>
+    <td class="p-2 text-right"><input type="number" name="bonus_${rowIndex}" class="w-full border px-2 py-1 rounded text-right"></td>
+    <td class="p-2 text-right total-cell">0 ₸</td>
+    <td class="p-2 text-center"><button type="button" onclick="removeRow(this)" class="text-gray-500 hover:text-red-600 font-bold text-xl">×</button></td>
+  `;
+  body.appendChild(tr);
+  rowIndex++;
+}
+
+function removeRow(button) {
+  const row = button.closest('tr');
+  if (row) row.remove();
+}
+
+function recalculateTotals() {
+  let grand = 0;
+  document.querySelectorAll('#payroll-body tr').forEach(tr => {
+    const cells = tr.querySelectorAll('input');
+    let oklad = parseFloat(cells[2]?.value) || 0;
+    let days = parseFloat(cells[3]?.value) || 0;
+    let bonus = parseFloat(cells[4]?.value) || 0;
+    let total = Math.round(oklad * (days / 30) + bonus);
+    const totalCell = tr.querySelector('.total-cell');
+    totalCell.innerText = total + ' ₸';
+    grand += total;
+  });
+  document.getElementById('grand-total').innerText = grand + ' ₸';
+}
+</script>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% for key, label in filters.items() %}
+  <a href="{{ url_for('orders_page') }}?state={{ key }}"
+     class="px-4 py-2 rounded-lg text-sm font-medium border
+            {% if selected_state == key %}
+              bg-red-600 text-white
+            {% else %}
+              bg-gray-200 text-gray-800 hover:bg-gray-300
+            {% endif %}">
+    {{ label }} ({{ filter_counts[key] }})
+  </a>
+{% endfor %}

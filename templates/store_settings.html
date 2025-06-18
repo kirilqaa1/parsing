@@ -1,0 +1,283 @@
+{% extends "base.html" %}
+{% block title %}Подключение Kaspi-магазина{% endblock %}
+{% block content %}
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f8f8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .faq-container {
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background: #e4002b;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .success {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      padding: 15px 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      cursor: pointer;
+    }
+    .faq-item h4 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    .faq-answer {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .toggle-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .toggle-wrapper input {
+      transform: scale(1.3);
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 46px;
+      height: 26px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      background-color: #ccc;
+      border-radius: 34px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: .4s;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      border-radius: 50%;
+      transition: .4s;
+    }
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+  </style>
+
+<body>
+
+
+  <main>
+    <div class="form-container">
+      {% if not store_name %}
+        <h2>Подключение к Kaspi</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% for category, message in messages %}
+            <p class="{{ category }}">{{ message }}</p>
+          {% endfor %}
+        {% endwith %}
+        <form method="POST">
+          <input type="email" name="kaspi_email" placeholder="Kaspi логин" required value="{{ session.get('kaspi_email', '') }}">
+          <input type="password" name="kaspi_password" placeholder="Пароль" required>
+          <button type="submit">Подключить магазин</button>
+        </form>
+      {% else %}
+        <h2>🛒 Магазин: {{ store_name }}</h2>
+        {% if api_token %}
+          <p class="label">API токен:</p>
+          <input type="text" value="{{ api_token }}" disabled style="background:#f0f0f0;">
+          <p class="label">Логин:</p>
+          <input type="text" value="{{ session.get('kaspi_email', '') }}" disabled style="background:#f0f0f0;">
+          <p class="label">Пароль:</p>
+          <input type="text" value="{{ session.get('kaspi_password', '') }}" disabled style="background:#f0f0f0;">
+        {% endif %}
+        <hr style="margin: 20px 0;">
+<p class="label">Статус подписки:</p>
+
+{% if trial_until %}
+  {% if current_time < trial_until %}
+    <p style="color: green;">
+      ✅ Пробный период активен до {{ trial_until }}.<br>
+      Вы можете пользоваться всеми функциями бота бесплатно.
+    </p>
+  {% else %}
+    <p style="color: orange;">
+      ⚠️ Ваш пробный период закончился {{ trial_until }}.<br>
+      Пожалуйста, выберите тарифный план и оформите подписку.
+    </p>
+  {% endif %}
+{% elif paid_until is none %}
+  <p style="color: orange;">
+    ⚠️ У вас нет активной подписки.<br>
+    Пожалуйста, выберите тарифный план и оформите подписку.
+  </p>
+
+{% elif subscription_price == -1 %}
+  <p style="color: red;">
+    ⛔ Ваш тариф "{{ plan_name }}" не покрывает {{ sku_count }} SKU.<br>
+    Свяжитесь с поддержкой для расширения лимита.
+  </p>
+
+{% elif subscription_active %}
+  <p style="color: green;">
+    ✅ Подписка "{{ plan_name }}" активна до {{ paid_until }}.
+  </p>
+
+{% else %}
+  <p style="color: orange;">
+    ❌ Подписка "{{ plan_name }}" истекла {{ paid_until }}.<br>
+    Пожалуйста, продлите её, чтобы продолжить работу.
+  </p>
+{% endif %}
+
+
+<div>
+  <label class="switch">
+    <input type="checkbox"
+           id="repricerToggle"
+           {% if repricer_running and subscription_active %}checked{% endif %}
+           {% if not subscription_active %}disabled{% endif %}>
+    <span class="slider round"></span>
+  </label>
+  <span id="toggleLabel">
+    {% if not subscription_active %}
+      🔒 Подписка не активна
+    {% elif repricer_running %}
+      Отключить бота
+    {% else %}
+      Включить бота
+    {% endif %}
+  </span>
+</div>
+
+<script>
+document.getElementById('repricerToggle').addEventListener('click', function (e) {
+  if (this.disabled) {
+    alert("🔒 Репрайсер недоступен. Пожалуйста, активируйте подписку или используйте пробный период.");
+    e.preventDefault();
+  }
+});
+
+document.getElementById('repricerToggle').addEventListener('change', function () {
+  if (this.disabled) return;
+
+  fetch("{{ url_for('toggle_repricer') }}", {
+    method: "POST"
+  })
+  .then(() => {
+    const label = document.getElementById('toggleLabel');
+    label.textContent = this.checked ? "Отключить бота" : "Включить бота";
+  })
+  .catch(err => alert("Ошибка при переключении репрайсера"));
+});
+</script>
+      {% endif %}
+    </div>
+
+    <div class="faq-container">
+      <h2>Часто задаваемые вопросы</h2>
+      {% set faqs = [
+        ('Как подключить магазин Kaspi?', 'Введите ваш Kaspi логин и пароль в форму и нажмите “Подключить магазин”.'),
+        ('Что делает репрайсер?', 'Он автоматически меняет цены ваших товаров, чтобы быть конкурентнее на Kaspi.'),
+        ('Как узнать, активна ли подписка?', 'Информация о статусе подписки отображается в разделе “Статус подписки”.'),
+        ('Сколько стоит подписка?', 'Цены зависят от количества SKU: от 20 000₸ до 60 000₸ в месяц.'),
+        ('Могу ли я вернуть деньги за подписку?', 'Нет, подписка оплачивается за период и возврат не предусмотрен.'),
+        ('Как изменить тариф?', 'Просто оплатите новый тариф, и он автоматически обновится.'),
+        ('Что будет, если подписка закончится?', 'Репрайсер и снятие с продажи станут недоступны до продления подписки.'),
+        ('Нужно ли что-то устанавливать?', 'Нет, всё работает через браузер. Достаточно входа в аккаунт.'),
+        ('Где посмотреть количество SKU?', 'Оно автоматически считается на странице управления товарами.'),
+        ('Как связаться с поддержкой?', 'Напишите нам на support@lkw.kz или в Telegram.')
+      ] %}
+      {% for question, answer in faqs %}
+      <div class="faq-item" onclick="this.querySelector('.faq-answer').style.display = this.querySelector('.faq-answer').style.display === 'block' ? 'none' : 'block';">
+        <h4>{{ question }}</h4>
+        <div class="faq-answer">{{ answer }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </main>
+{% endblock %}

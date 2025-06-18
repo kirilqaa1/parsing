@@ -1,0 +1,92 @@
+
+
+{% extends "base.html" %}
+{% block title %}Тарифы{% endblock %}
+
+{% block content %}
+<head>
+  <meta charset="UTF-8">
+  <title>Бот для изменения цен</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="container">
+      <div class="left">
+        <h1>
+          <span class="title-line">Бот для изменения цен</span>
+          <span class="title-line">в Вашем магазине</span>
+        </h1>
+
+        <div class="feature">
+          <img src="{{ url_for('static', filename='alarm-clock-svgrepo-com.svg') }}" alt="clock">
+          <span>Мониторинг цен конкурентов и автоматическое снижение цен</span>
+        </div>
+
+        <div class="feature">
+          <img src="{{ url_for('static', filename='paper-plane-svgrepo-com.svg') }}" alt="setup">
+          <span>Один раз настроили — дальше всё работает без вашего участия. Вы отдыхаете, бот работает</span>
+        </div>
+
+        <div class="feature">
+          <img src="{{ url_for('static', filename='light-bulb-svgrepo-com.svg') }}" alt="simple">
+          <span>Интерфейс без лишнего — только нужные функции</span>
+        </div>
+
+        <a href="{{ url_for('login_user') }}">
+  <button class="cta-button">Попробовать бесплатно</button>
+</a>
+        <div class="trial-note">1 день пробного периода*</div>
+      </div>
+
+      <div class="right">
+        <img src="{{ url_for('static', filename='kaspi.png') }}" alt="Kaspi + Coins">
+      </div>
+    </div>
+  </div>
+
+  <section class="problem-block">
+    <div class="problem-container">
+      <div class="problem-text">
+        <h2>
+          <span class="title-line">Ручное управление ценами —</span>
+          <span class="title-line">причина потери <span class="red">прибыли</span></span>
+        </h2>
+
+        <p class="subtitle">
+          Когда конкуренты меняют цены каждые 10 минут, ручное управление больше не работает.
+        </p>
+
+        <ul class="problem-list">
+          <li>❌ Невозможно отслеживать конкурентов вручную 24/7</li>
+          <li>❌ Ошибки и забытые цены ведут к потере позиций</li>
+          <li>❌ Уходит до 3 часов в день на рутинные действия</li>
+        </ul>
+
+        <p class="highlight">
+          Если ваш товар не в топе, вы теряете до <span class="red">70%</span> продаж — просто потому что кто-то обновился раньше.
+        </p>
+      </div>
+
+      <div class="problem-image">
+        <img src="{{ url_for('static', filename='phone.png') }}" alt="Проблема ручного управления">
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-block">
+    <div class="contact-container">
+      <div class="contact-text">
+        <h2>Остались вопросы?</h2>
+        <p>Оставьте почту или номер телефона — мы свяжемся с вами и расскажем всё подробно.</p>
+      </div>
+      <form class="contact-form" method="post" action="{{ url_for('handle_contact') }}">
+        <input type="text" name="contact" placeholder="Ваш номер или email" required>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
+{% endblock %}

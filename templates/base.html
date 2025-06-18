@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Kaspi CRM{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: scale(0.97); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.25s ease-out;
+    }
+
+    /* Увеличение шрифтов и размеров на больших экранах */
+    @media (min-width: 1024px) {
+      html {
+        font-size: 17px;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      input[type="file"],
+      textarea,
+      select {
+        font-size: 1.05rem;
+        padding: 12px 16px;
+      }
+
+      button {
+        font-size: 1.05rem;
+        padding: 14px 24px;
+      }
+
+      th, td {
+        font-size: 1.05rem;
+        padding: 16px 12px;
+      }
+
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.75rem; }
+      h3 { font-size: 1.5rem; }
+    }
+
+    /* Адаптация на мобильных устройствах */
+    @media (max-width: 768px) {
+      th, td {
+        font-size: 0.875rem;
+        padding: 8px;
+      }
+
+      .modal-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0;
+        border-radius: 0;
+      }
+
+      .modal-wrapper {
+        padding: 1rem !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="text-gray-900 text-base font-sans bg-white">
+{% if session.get('register_email') %}
+  {% include "header.html" %}
+{% else %}
+  {% include "header_guest.html" %}
+{% endif %}
+
+
+  <!-- Контент -->
+<main class="pt-20 px-4 md:pt-6 md:px-6 {% if session.get('register_email') %}md:ml-[240px]{% endif %}">
+  <div class="max-w-screen-xl mx-auto w-full overflow-x-auto">
+    {% block content %}{% endblock %}
+  </div>
+</main>
+
+
+  <!-- Подгрузка фильтров -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch("/orders_filters")
+        .then(res => res.text())
+        .then(html => {
+          const el = document.getElementById("filters");
+          if (el) el.innerHTML = html;
+        });
+    });
+  </script>
+
+  <!-- Модалка заказов -->
+  <script>
+    function openModalFromElement(el) {
+      try {
+        const json = el.dataset.order;
+        const order = JSON.parse(json);
+        openModal(order);
+      } catch (err) {
+        console.error("Ошибка парсинга заказа:", err);
+      }
+    }
+
+    function openModal(order) {
+      const attr = order.attributes;
+      const customer = attr.customer || {};
+      const address = attr.deliveryAddress?.address || attr.deliveryAddress || {};
+      let items = [];
+
+      fetch(`/order_entries/${order.id}`)
+        .then(res => res.json())
+        .then(data => {
+          items = Array.isArray(data) ? data : [];
+          renderItems();
+        });
+
+      const modal = document.createElement('div');
+      modal.id = 'orderModal';
+      modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex justify-center items-start z-[9999] px-4 py-10 overflow-auto';
+
+      modal.innerHTML = `
+        <div class="bg-white rounded-2xl w-full max-w-3xl shadow-2xl relative animate-fade-in border border-gray-200 modal-content">
+          <div class="p-6 border-b flex justify-between items-center bg-gray-50 rounded-t-2xl">
+            <h2 class="text-xl font-semibold text-gray-800">📋 Информация о заказе</h2>
+            <button onclick="document.getElementById('orderModal').remove()" class="text-gray-500 hover:text-red-500 text-2xl">&times;</button>
+          </div>
+
+          <div class="p-6 space-y-6 text-sm text-gray-800 modal-wrapper">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div><p class="text-gray-500">🧾 Код заказа</p><p class="font-semibold">${attr.code}</p></div>
+              <div><p class="text-gray-500">📦 Статус</p><p class="font-semibold">${attr.status}</p></div>
+              <div><p class="text-gray-500">💰 Сумма</p><p class="font-semibold">${attr.totalPrice} ₸</p></div>
+              <div><p class="text-gray-500">🚛 Доставка</p><p class="font-semibold">${attr.deliveryMode || "Kaspi"}</p></div>
+              <div><p class="text-gray-500">👤 Покупатель</p><p class="font-semibold">${customer.firstName || ""} ${customer.lastName || ""}</p></div>
+              <div><p class="text-gray-500">📱 Телефон</p><p class="font-semibold">${customer.cellPhone || "—"}</p></div>
+              <div class="sm:col-span-2"><p class="text-gray-500">📍 Адрес доставки</p><p class="font-semibold">${address.formattedAddress || "—"}</p></div>
+              <div><p class="text-gray-500">🕒 Дата создания</p><p class="font-semibold">${formatTs(attr.creationDate)}</p></div>
+              <div><p class="text-gray-500">📅 Плановая доставка</p><p class="font-semibold">${formatTs(attr.plannedDeliveryDate)}</p></div>
+              <div><p class="text-gray-500">🚚 Передача курьеру</p><p class="font-semibold">${formatTs(attr.kaspiDelivery?.courierTransmissionPlanningDate)}</p></div>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-3 border-b pb-2">🛒 Товары (<span id="orderItemsCount">0</span>)</h3>
+              <div id="orderItems" class="space-y-3"></div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      function renderItems() {
+        const container = modal.querySelector("#orderItems");
+        const countEl = modal.querySelector("#orderItemsCount");
+        if (!container) return;
+        countEl.textContent = items.length;
+        container.innerHTML = items.map(item => `
+          <div class="border rounded-lg px-4 py-3 bg-gray-50">
+            <p class="font-medium">▶️ ${item.name}</p>
+            <p class="text-sm text-gray-600 mt-1">
+              Артикул: ${item.code || "—"} |
+              Кол-во: ${item.quantity} |
+              Цена: ${item.price} ₸ |
+              Бренд: ${item.brand || "—"}
+            </p>
+          </div>
+        `).join("");
+      }
+
+      document.body.appendChild(modal);
+    }
+
+    function formatTs(ts) {
+      if (!ts) return '—';
+      const d = new Date(Number(ts));
+      return d.toLocaleString("ru-RU");
+    }
+  </script>
+</body>
+</html>

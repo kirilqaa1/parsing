@@ -1,0 +1,45 @@
+<!-- Заработная плата: Список месяцев -->
+{% extends "base.html" %}
+{% block title %}Заработная плата{% endblock %}
+
+{% block content %}
+<div class="w-full max-w-screen-xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+  <h2 class="text-2xl font-bold text-gray-800 mb-6">Заработная плата по месяцам</h2>
+
+  {% if payrolls %}
+  <ul class="space-y-3">
+    {% for payroll in payrolls %}
+    <li>
+      <a href="{{ url_for('payroll_month', month=payroll.month) }}" class="flex flex-col sm:flex-row justify-between sm:items-center p-4 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 transition-all">
+        <span class="text-base font-medium text-gray-800">{{ payroll.month_name }}</span>
+        <span class="text-gray-600 font-semibold mt-2 sm:mt-0">{{ payroll.total }} ₸</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <div class="bg-white border border-dashed border-gray-300 rounded-lg p-8 text-center text-gray-500 shadow">
+    <p class="text-lg">Нет данных по зарплате. Нажмите ниже, чтобы создать первый месяц.</p>
+  </div>
+  {% endif %}
+
+  <form method="get" action="{{ url_for('payroll_month', month='') }}" onsubmit="event.preventDefault(); createMonth()">
+    <div class="mt-10 bg-white shadow border border-gray-200 p-6 rounded-lg flex flex-col sm:flex-row items-center gap-4 justify-center">
+      <label class="text-sm text-gray-700 font-medium">Выберите месяц:</label>
+      <input type="month" id="month_input" class="w-full sm:w-auto border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required>
+      <button type="submit" class="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-medium">
+        ➕ Создать месяц
+      </button>
+    </div>
+  </form>
+
+  <script>
+    function createMonth() {
+      const month = document.getElementById('month_input').value;
+      if (!month) return;
+      const url = "{{ url_for('payroll_month', month='__PLACEHOLDER__') }}".replace('__PLACEHOLDER__', month);
+      window.location.href = url;
+    }
+  </script>
+</div>
+{% endblock %}

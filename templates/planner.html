@@ -1,0 +1,51 @@
+<!-- Планировщик задач с воронкой -->
+{% extends "base.html" %}
+{% block title %}Планировщик{% endblock %}
+
+{% block content %}
+<div class="w-full max-w-screen-xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+  <h2 class="text-2xl font-bold text-gray-800 mb-6">Моя воронка</h2>
+
+  <div class="flex overflow-x-auto gap-6 pb-4" id="funnel-board">
+    {% for stage in stages %}
+    <div class="w-72 min-w-[18rem] bg-gray-100 border rounded-lg shadow-sm p-4 flex flex-col">
+      <div class="text-lg font-semibold text-gray-700 mb-3">{{ stage.title }}</div>
+      <div class="space-y-3 flex-1" id="stage-{{ stage.id }}">
+        {% for task in tasks[stage.id] %}
+        <div class="bg-white border rounded shadow-sm p-3 cursor-move">
+          <div class="text-sm font-medium">{{ task.title }}</div>
+          <div class="text-xs text-gray-500">{{ task.deadline }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-1.5 rounded text-sm" onclick="addTask({{ stage.id }})">➕ Добавить</button>
+    </div>
+    {% endfor %}
+    <div class="w-72 min-w-[18rem] flex items-center justify-center">
+      <button onclick="addStage()" class="text-gray-600 hover:text-blue-600 text-sm">+ Добавить этап</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function addStage() {
+  const name = prompt("Введите название этапа:");
+  if (!name) return;
+  fetch("/planner/stage/create", {
+    method: "POST",
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ title: name })
+  }).then(() => location.reload());
+}
+
+function addTask(stageId) {
+  const title = prompt("Введите название задачи:");
+  if (!title) return;
+  fetch("/planner/task/create", {
+    method: "POST",
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ stage_id: stageId, title: title })
+  }).then(() => location.reload());
+}
+</script>
+{% endblock %}

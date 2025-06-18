@@ -1,0 +1,2173 @@
+<?xml version="1.0" encoding="UTF-8"?><kaspi_catalog xmlns="kaspiShopping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://kaspi.kz/kaspishopping.xsd" date="2025-06-04 04:31">
+    <company>30171292</company>
+    <merchantid>30171292</merchantid>
+    <offers>
+        <offer sku="121428514_997778424">
+            <model>АВТОМАГНАТ диск сцепления 1878000205</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">45000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="139367987_233854160">
+            <model>КАМАЗ маслоприемник 740.90-1013200</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">220000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="100918455_066947038">
+            <model>Felix Тосол синий (голубой) G-12+ 10 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">8950</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="131064471_049535154">
+            <model>КАМАЗ бортовая платформа 53215-8505029-73К КАМАЗ 53205, 54115, 65115</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">5334</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="134405222_680712091">
+            <model>КАМАЗ втулка стабилизатора 5320-2918074-P1</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">13798</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117163546_585718232">
+            <model>Tehnotron 21-324 для КАМАЗ 65115 1990-2010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">266286</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="124064052_683262057">
+            <model>КАМАЗ турбонагнетатель 7406-1118013</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">156000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="410761422">
+            <model>Указатель габаритов Светодиодные рога</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">3420</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="133219029_087362006">
+            <model>КАМАЗ крепление 5320-5001010 КАМАЗ 54115</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">42998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="123237963_922981775">
+            <model>Набережные Челны накладка 5511-8601144 КАМАЗ 65115, 65111, 53205</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4448</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130379527_639331606">
+            <model>ОАО корпус теплообменника 40.20-1013200</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="1.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">174897</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="116783460_136681816">
+            <model>КАМАЗ шестерня распределительного вала 740.1006214</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">20189</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="106182604_471975165">
+            <model>ТехАвтоСвет стоп-сигнал 171-601</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">7348</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="131571903_617219320">
+            <model>КАМАЗ буфер 5320-2707225</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1889</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="115677891_594125224">
+            <model>КАМАЗ буфер 5511-8601144</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4140</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="118709070_952537104">
+            <model>Кран отопителя 5320-1305010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="131691154_169734601">
+            <model>КАМАЗ крюк буксировочный 8350-2707042 КАМАЗ, МАЗ 53205, 500, 54115</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">30298</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="131131498_437748810">
+            <model>КАМАЗ муфта вентилятора охлаждения 740.51-1111054-01</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">6297</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="123894258_133325699">
+            <model>ДЗВ коренные вкладыши 740.60-1000102</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">17700</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="123239437_151939011">
+            <model>MILES 57412MF Аккумулятор MILES 74 Ah 74 обратная</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">69000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="116361258_312807487">
+            <model>АВТОМАГНАТ масляный фильтр 6W.23.614.00</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">9700</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="111218136_902765584">
+            <model>КАМАЗ топливная трубка 740.11-1104310-324</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">11998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="109174516_558438463">
+            <model>7WIN 310647 Очиститель карбюратора КАРБ 0.45 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">772</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="110209117_163417089">
+            <model>АВТОМАГНАТ энергоаккумулятор 100-3519100-10</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">21532</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="107741045_560500665">
+            <model>КАМАЗ вал первичный КПП 152-1770044</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">45497</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="107574861_065653815">
+            <model>Смазка WX-4 WD 40 0.4 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">718</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="131064432_583107619">
+            <model/>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">82500</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="223710786">
+            <model>Фонарь Газ</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2599</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="107704226_264161599">
+            <model>Диски КАМАЗ передние 53205-3501070</model>
+            <brand>ZTD</brand>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="10.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">43974</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117495586_037320272">
+            <model>Панель кузова передняя для КАМАЗ 65115 1990</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="1.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">35000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="759559388">
+            <model>Стоп-сигнал</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">6739</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="133815621_384667485">
+            <model>КАМАЗ воздушный компрессор 53205-3509015-21</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">89999</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="103184345_740485322">
+            <model>КАМРТИ ремкомплект масляного фильтра 7406-1012000-01</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1648</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="123230172_012067100">
+            <model>ДЗАФ воздушный фильтр ДФВ 5802 (7405-1109560)</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">5145</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="106606355_208135577">
+            <model>Топливный насос КАМАЗ 37.1141010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">3783</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="122278706_192860560">
+            <model>КАМАЗ стремянка рессоры 5320-2902408</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="6.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">3498</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117247962_407544062">
+            <model>КАМАЗ ручка двери 5320-6104060</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1673</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="116729528_030257674">
+            <model>КАМАЗ шестерня четвертой передачи 142.1701115</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">40500</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117390748_347036181">
+            <model>КАМРТИ ремкомплект главного тормозного цилиндра 100-3514000-10У</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">3788</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117102876_258624550">
+            <model>Усилитель 5325-2803016 для КАМАЗ 65115 2000</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2497</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="122613272_936359211">
+            <model>AIRLINE AROMA ароматизатор эко-волокно AFB0205 черный лед 6 мл</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1760</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="133291273_224887635">
+            <model>КАМАЗ ремкомплект редуктора заднего моста 5320-2502063/067/175/550</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">3997</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130869790_949607262">
+            <model>КАМАЗ рессора подвески 55111-2912101-02</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">35085</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="116730658_009127242">
+            <model>ДЗВ вкладыши распредвала 740.60Д-1000104</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">23520</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="115968341_814391784">
+            <model>КАМАЗ шланг сцепления 53215-1602590</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4798</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="110731477_665751210">
+            <model>Стеклоподъемник передний правый КАМАЗ 53205-6104010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">13500</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="110264304_466255085">
+            <model>КАМАЗ радиатор печки 5320-8101060-04</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="5.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">45000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="108150401_240331206">
+            <model>AIRLINE ароматизатор гелевый AF-A01-PC Пина колада</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2099</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="123287829_556730207">
+            <model>КАМАЗ шарнир привода КПП 362-1703420</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">3888</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="100024292_014530654">
+            <model>Антифриз Felix Carbox красный (розовый) G-12+ 10 л</model>
+            <brand>Felix</brand>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">10751</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117624746_171058373">
+            <model>Крыло КАМАЗ переднее левое 5320-8403021 для КАМАЗ 53205 1980</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">31295</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="121999242_043112404">
+            <model>Смазка минеральная AVIKS TU19.20.29-005-29843759-2017 0.38 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1650</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="137056502_329865377">
+            <model>Элемент 5320-5109010-010Э КАМАЗ 65115 1995 черный</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="3.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">16500</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="120506663_167336217">
+            <model>КАМАЗ 5460-3101060 колпак 22.5 черный 1 шт для грузового транспорта</model>
+            <brand>КАМАЗ</brand>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1598</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="100024296_283266314">
+            <model>Felix Carbox G12+ Professional -40 красный (розовый) G-12+ 1 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="8.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1478</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="129001738_554676892">
+            <model>КМЗ гильза цилиндра с поршнем в сборе 740.1000128</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="8.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">37500</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="112379340_297838960">
+            <model>КАМАЗ шланг масляный 5320-3829040</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">3448</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="132228541_208977819">
+            <model>БАЛАКОВО ЗАПЧАСТЬ патрубок воздухозаборника воздушного фильтра 53205-1109250</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2908</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="108150384_935140698">
+            <model>AIRLINE ароматизатор гелевый AFB0204 Boss</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1579</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="119926424_118767136">
+            <model>КАМАЗ обратный клапан 740.21-1104020</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2696</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="131628848_034151913">
+            <model>КАМАЗ вал вторичный КПП 142-1701105</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">114998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117757647_271275455">
+            <model>КАМРТИ насос ТНВД 33-1111000-30У</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">9736</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="120854208_720657444">
+            <model>
+КАМАЗ гайка 853552</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="35.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0" stockCount="49.0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">279</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="132629986_397802309">
+            <model>КАМАЗ расширительный бачок 43085-1311010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">15798</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="131064489_094105366">
+            <model>SEDAN масляный фильтр 7405-1017040-02</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2886</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="123327712_146163986">
+            <model>ДЗВ втулка шатуна 740-1004052 "ДЗВ"</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1300</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130747911_158732421">
+            <model>КАМАЗ ремкомплект 7403.1008064</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">447</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="123624303_229147303">
+            <model>Набережные Челны фланец 7406-1111050К</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">28398</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="132229453_824058747">
+            <model>КАМАЗ патрубок системы охлаждения 5320-1303058</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">5988</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="108294950_707075528">
+            <model>КАМАЗ патрубок 7403-1118278</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1449</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130617914_842505820">
+            <model>ДЗАФ масляный фильтр 740510120404803</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1398</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="128778977_518293832">
+            <model>РААЗ клапан 100-3522010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">49997</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="116730656_861669552">
+            <model/>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">117044</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="136601477_632995524">
+            <model>КАМАЗ капот 53205-8401120 для КАМАЗ 54115, 53205 2000</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="1.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">30500</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="110194526_763324601">
+            <model>КАМРТИ ремкомплект двигателя 7405-1002004-47У</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">54998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="100024300_754281494">
+            <model>Felix Prolonger зеленый G-11 5 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4898</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117759628_926985108">
+            <model>КАМАЗ датчик температуры двигателя 5320-3828010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1498</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130869775_511577895">
+            <model>КАМАЗ рессора подвески 55111-2902102-01</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">16998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117519250_915094444">
+            <model>КАМРТИ ремкомплект вакуумного усилителя 100-3519100-20У</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">5998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130742866_901876596">
+            <model>ДЗВ шатунные вкладыши 7405.1000104Р2</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">22246</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="100024286_398098830">
+            <model>Felix Prolonger зеленый G-11 1 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1198</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="120771238_302413155">
+            <model>Диски АВТОМАГНАТ передние 53205-3501070</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">54395</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="131252317_787028956">
+            <model>КАМАЗ корпус дифференциала 53205-2506016</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">59496</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="129350708_130406330">
+            <model>Муфта опережения впрыска топлива КамАЗ</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">58000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="116730650_248780690">
+            <model>КАМАЗ вал распределительный 740.1006015-04</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">79296</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="129919017_319534602">
+            <model>КАМАЗ серьга рессоры 5320-2902126</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">13800</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="133496723_934052461">
+            <model>КАМАЗ чехол-предфильтр для воздушного фильтра 7405.1109574</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="8.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">700</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117945106_882945827">
+            <model>КАМРТИ форсунка впрыска топлива 33-1112000У</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1098</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117945103_918566596">
+            <model>КАМРТИ кольцо уплотнительное 740.1003460-01</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">428</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="131064453_680655611">
+            <model>КАМАЗ укрепительный комплект 5320-1001062-10</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">6998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="118798740_329383568">
+            <model>КАМАЗ кран отопителя 1001-8105160</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">6698</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="118520869_286577874">
+            <model>КАМАЗ шкворень 53205-3001019-10</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">8797</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130742839_986103384">
+            <model/>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">16996</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117495585_229483091">
+            <model>Панель кузова передняя для КАМАЗ 65115 1990-2000</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">32998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="110343828_357956937">
+            <model>Element ELEMENTA0N113B10 Kia K5 2020-2023 черный</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">14591</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="102295820_002843916">
+            <model>Регулятор давления воздуха 100-3512010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">6874</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="107360551_063242100">
+            <model>КАМАЗ корпус теплообменника 740.90-1013200</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">164600</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117390733_721462291">
+            <model>КАМАЗ датчик АКПП 4202.3843010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">26996</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="100024304_061463195">
+            <model>Антифриз Felix Prolonger зеленый G-11 10 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">9349</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="122718882_156059508">
+            <model>MILES 105D31L MILES Ah90 90 обратная</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">74790</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117390751_849854152">
+            <model>КАМАЗ шкворень 5320-3001016</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2997</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="137959481_965032265">
+            <model>КАМАЗ масляная форсунка 7405.1004065</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="119646945_334246411">
+            <model>КАМАЗ шарнир привода КПП 14101-1703520-10</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">15700</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="132630105_929266635">
+            <model>КАМАЗ балансир 55111-2918070</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">72000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="121428550_312595665">
+            <model>АВТОМАГНАТ диск сцепления 1878000206</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">45000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="929099186">
+            <model>Фонари задние Камаз</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">7099</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="129504660_728689423">
+            <model>Набережные Челны крышка маслозаливной горловины 5320-1311103К</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="1.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">348</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="100918452_946725127">
+            <model>Felix Тосол синий (голубой) G-12+ 5 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4350</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="121140154_341096400">
+            <model>КАМАЗ труба выхлопной системы 000.4859.244.000</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">20300</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="108325283_624544387">
+            <model>КАМАЗ 11-3116010-02 задний левый, правый</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1698</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="120141825_302473538">
+            <model>КАМАЗ штанга R5511-2919026-15</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">10489</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="116998824_596214236">
+            <model>Топливный насос ЯЗДА 323.1106010-10</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="2.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">15614</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="135903750_648876209">
+            <model>КАМАЗ ремкомплект рулевого наконечника 740-1108054</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">900</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="132126410_903552966">
+            <model>КАМАЗ вакуумный усилитель тормоза 5320-1609510</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">97998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="109174733_606496435">
+            <model>КАМАЗ опора двигателя 5320-1001051</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2474</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117081055_908232247">
+            <model>КАМАЗ кольцо уплотнительное 740.1003466</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4798</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="118833474_167253832">
+            <model/>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">15997</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="114548497_537378638">
+            <model>DEPO стоп-сигнал 442-1910L-UE</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">13499</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117624625_009644551">
+            <model>Brix водосгон BRX0140001 1 шт</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">620</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="105118221_153703875">
+            <model>AIRLINE скребок AB-P-01 1 шт</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="6.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">329</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="122278709_836534484">
+            <model>КАМАЗ стремянка рессоры 55111-2912408-20</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">9498</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="123824713_528039095">
+            <model>КАМАЗ фланец вторичного вала 142.1701240</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">18498</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="131647751_286203359">
+            <model>КАМАЗ капот 53205-8401012 для КАМАЗ 54115, 53205 1990</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="1.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">24500</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="118581753_554572669">
+            <model>КАМАЗ вал привода 5320-2402110-20</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">26832</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="096999675">
+            <model>Aviks Solidol 18кг</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="1.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">17600</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117758038_123746537">
+            <model>КАМАЗ датчик давления воздуха 6032.3829</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="119647001_323212897">
+            <model>КАМАЗ шарнир привода КПП 362-1703620-20</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">21094</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="137939294_929414709">
+            <model>КАМАЗ синхронизатор 152-1770160</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">68998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="118091931_900079367">
+            <model>КАМАЗ труба подводящая 740.1011398</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">18698</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117766827_579154497">
+            <model>КАМРТИ ремкомплект вакуумного усилителя 100-3522100-10</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2498</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="119366901_191965339">
+            <model>Датчик температурный сб1326</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4798</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130974394_745770617">
+            <model>КАМАЗ пружина тормозной колодки 5320-3501035-10</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1348</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="115745337_456265412">
+            <model>КАМАЗ шестерня полуоси 53205-2403050</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">14576</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="133377548_447566319">
+            <model>КАМАЗ подушка двигателя 5320-1001020</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">7570</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="122417425_697381984">
+            <model>КАМРТИ 5320-8403185-01 для КАМАЗ 65115, 53205, 54115 1991</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="10.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4850</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117363721_171506179">
+            <model>КАМАЗ ремкомплект ступицы Р53205-3104000-10</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">7277</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="116896614_389215507">
+            <model>Стоп-сигнал 6520</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">11998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="123327718_323229115">
+            <model>ДЗВ втулка 740-1006037-01 "ДЗВ"</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1198</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="106075078_935151579">
+            <model>Felix Carbox красный (розовый) G-12+ 20 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">17200</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="132403697_354741480">
+            <model>КАМАЗ маслоотделитель 53205-3502146</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="140493164_574678397">
+            <model>Диски ZTD передние 53205-3501070</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">43989</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="100018979_853436637">
+            <model>Felix Carbox красный (розовый) G-12+ 5 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4948</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130075354_795983797">
+            <model>БАЛАКОВО ЗАПЧАСТЬ ремкомплект 740-1012000-01</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">298</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="108182083_418368242">
+            <model>DEPO поворотник 441-1923L-UE-YR</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">16349</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="137251727_892307799">
+            <model>КАМАЗ корпус 7406-1012010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="1.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">32798</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="115677936_695591718">
+            <model>КАМАЗ буфер 55102-8501300</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2436</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="137251726_622723589">
+            <model>КАМАЗ заглушка 5320-3710015</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">200</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117260560_561206204">
+            <model>Воздушный фильтр 721-1109560-20</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">10050</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117390756_002483433">
+            <model>Подшипник 53205-3001000</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">9998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="102461084_568598729">
+            <model>AVIKS Литол-24 0.38 кг</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1490</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="108163379_136535952">
+            <model>Камаз клапан 11-3518010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">6498</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="118726840_498384147">
+            <model>КАМАЗ вал привода 53205-2402110-30</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">43798</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="107093946_230006633">
+            <model>AIRLINE щетка ABR03 1 шт</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2700</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="120676512_549964071">
+            <model>AT выключатель массы AT38500</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">5998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="106471012_961531788">
+            <model>AIRLINE щетка AB-R-13S 1 шт</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2690</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117390755_032439549">
+            <model>КАМРТИ насос ТНВД 33-1111000-20У</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4528</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="131424615_480520033">
+            <model>ДЗВ втулка 740.21-1006037</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1598</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="110520512_696269131">
+            <model>КАМАЗ клапан 100.3518010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">5488</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="108751490_152484320">
+            <model>КАМАЗ полуось 43118-2403070</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">168998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="124214787_735390334">
+            <model>DEPO поворотник 442-1910R-UE</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">8000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130556588_782016633">
+            <model>ZTD клапан 100-3518010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">6298</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="107228217_293860158">
+            <model>TYC блок фара 20-3050-01-6B</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">22175</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="120390882_718359438">
+            <model>КАМАЗ воздуховод 5320-1109384-01</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">14998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130298483_875851855">
+            <model>ДЗАФ воздушный фильтр ДФВ 5801</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4298</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130861907_723379131">
+            <model>TYC блок фара 111901017B</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">17500</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130951438_967129853">
+            <model>КАМАЗ регулятор давления 0281002937</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">22789</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="129919033_247599072">
+            <model>КАМАЗ клапан 9527-3515400</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">14398</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="130640303_065671786">
+            <model>AIRLINE водосгон AB-M-02 1 шт</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="114045315_573312051">
+            <model>Колодки CANICOM задние 69-29061 2 шт</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">21500</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="121310117_361637211">
+            <model>КАМАЗ крышка КПП 530-1702200</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">109998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="107933130_201598041">
+            <model>КАМАЗ втулка 55111-2918074-01</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">8448</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117081060_592855741">
+            <model>КАМАЗ модельный 4308-3402010</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="4.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">34998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="121224616_249696710">
+            <model>КАМАЗ пластина упорная 15.1772080</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1348</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="122631840_185742800">
+            <model>КАМАЗ шарнир 6520-2919026</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">24998</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="121673775_820966137">
+            <model>КАМАЗ сухарь вилки КПП 14.1702029</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2078</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="107740321_162899021">
+            <model>КАМАЗ вал привода 5320-2402024</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">16539</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="121673773_853220849">
+            <model>КАМАЗ сухарь вилки КПП 14.1702035</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2170</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="110014208_088687275">
+            <model>КАМАЗ ступица 5320-3104015-02</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="4.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">80600</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="110348355_072922007">
+            <model>Смазка минеральная AVIKS 752823 5 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="5.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">5500</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="116783465_907316792">
+            <model>КАМАЗ шкворень 6520-3001019</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">14141</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="110014230_928423943">
+            <model>Топливный насос ЯЗДА 332-1106010-01</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">13989</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="138560539_684183372">
+            <model>КАМАЗ сальник 142-1702340</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="5.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">950</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="137975072_693259403">
+            <model>КАМАЗ сальник полуоси 864158-10</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="10.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2400</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="129377109_725526834">
+            <model>Brix щетка BRX0070001 1 шт</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2684</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="108113395_736551078">
+            <model>КАМАЗ клапан 100-3515210</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">5374</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="121610664_703688652">
+            <model>КАМАЗ патрубок 53205-1109375</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">3952</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="108294967_736932285">
+            <model>КАМАЗ палец 5320-3414008</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">5702</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="113074199_586776694">
+            <model>ТехАвтоСвет стоп-сигнал 171.3716-601</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">4230</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="110093180_737631093">
+            <model>КАМАЗ фланец вторичного вала 53205-2402036</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">21500</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="122050710_523348136">
+            <model>КАМАЗ ресивер 53205-3513015</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">17000</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="121581127_449419536">
+            <model>Смазка литиевая AVIKS Литол AVIKS 1 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1700</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117482498_603876259">
+            <model>Смазка литиевая AVIKS Литол-24 AVIKS 18 кг 18 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">36500</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="133758364_194237744">
+            <model>Смазка литиевая AVIKS Solidol-G 800 гр. (банка) 0.8 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="12.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">950</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="133812815_632732968">
+            <model>Смазка литиевая AVIKS LITOL-24 800 гр. (банка) 0.8 л</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="20.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1650</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="117390799_915939439">
+            <model>КАМАЗ кожух 5320-2918120-20</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">2484</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="103003413_829882506">
+            <model>AIRLINE AHC-SF-05 черный</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">7635</cityprice>
+            </cityprices>
+        </offer>
+        <offer sku="119559804_919711923">
+            <model>Кнопка 5320-3740157</model>
+            <brand/>
+            <availabilities>
+                <availability available="yes" storeId="30171292_PP1" preOrder="0" stockCount="10.0"/>
+                <availability available="yes" storeId="30171292_DE1" preOrder="0"/>
+            </availabilities>
+            <cityprices>
+                <cityprice cityId="551010000">1610</cityprice>
+            </cityprices>
+        </offer>
+    </offers>
+</kaspi_catalog>

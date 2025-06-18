@@ -1,0 +1,80 @@
+<header style="
+  background-color: #ffffff;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+">
+  <!-- Лого + название -->
+  <div style="display: flex; align-items: center;">
+    <!-- <img src="{{ url_for('static', filename='lkwlogodark.png') }}" alt="Логотип" style="height: 58px; margin-right: 12px;"> -->
+
+  </div>
+
+  <!-- Навигация -->
+  <nav style="display: flex; gap: 28px; align-items: center;">
+    <!-- <a href="{{ url_for('landing') }}" class="nav-link">Главная</a> -->
+    <!-- <a href="{{ url_for('tarify') }}" class="nav-link">Тарифы</a> -->
+
+    <a href="{{ url_for('login_user') }}" class="auth-button">Войти</a>
+    <a href="{{ url_for('register') }}?register=1" class="auth-button outlined">Регистрация</a>
+  </nav>
+
+  <style>
+    .nav-link {
+      position: relative;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 4px 0;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 2px;
+      background-color: #e4002b;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+
+    .auth-button {
+      text-decoration: none;
+      background-color: #e4002b;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .auth-button:hover {
+      background-color: #c80026;
+    }
+
+    .auth-button.outlined {
+      background-color: transparent;
+      color: #e4002b;
+      border: 1px solid #e4002b;
+    }
+
+    .auth-button.outlined:hover {
+      background-color: #e4002b;
+      color: white;
+    }
+  </style>
+</header>

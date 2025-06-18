@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}Заказы{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-6 py-8">
+  <h1 class="text-3xl font-bold mb-6">📦 Заказы ({{ orders|length }})</h1>
+
+  <!-- Фильтры -->
+  <div class="flex gap-4 mb-4 flex-wrap">
+    {% set statuses = {
+      'PICKING': 'Упаковка',
+      'READY': 'Передача',
+      'DELIVERY': 'Переданы на доставку',
+      'CANCELLED': 'Отменены при доставке',
+      'PREORDER': 'Предзаказ',
+      'ARCHIVE': 'Архив'
+    } %}
+    {% for key, label in statuses.items() %}
+      <a href="{{ url_for('orders_page', state=key) }}"
+         class="px-4 py-2 rounded-lg text-sm font-medium border transition
+                {% if selected_state == key %}
+                  bg-red-600 text-white border-red-600
+                {% else %}
+                  bg-gray-100 text-gray-800 hover:bg-gray-200 border-gray-300
+                {% endif %}">
+        {{ label }}
+        {% if status_counts[key] %}
+          <span class="ml-1 text-xs font-semibold">
+            ({{ status_counts[key] }})
+          </span>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+
+  <!-- Поиск -->
+  <form method="get" class="flex gap-4 mb-6 flex-wrap items-end">
+    <input type="hidden" name="state" value="{{ selected_state }}">
+    <div>
+      <label for="order_code" class="text-sm block mb-1">Номер заказа</label>
+      <input type="text" id="order_code" name="order_code" value="{{ request.args.get('order_code', '') }}"
+             class="border rounded-lg px-3 py-2 text-sm w-48">
+    </div>
+    <button type="submit"
+            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium">
+      🔍 Поиск
+    </button>
+  </form>
+
+  <!-- Таблица -->
+  <div class="overflow-x-auto bg-white shadow rounded-lg border">
+    <table class="min-w-full text-sm">
+      <thead class="bg-gray-100 text-left">
+        <tr>
+          <th class="py-2 px-4">Номер заказа</th>
+          <th class="py-2 px-4">Способ доставки</th>
+          <th class="py-2 px-4">Дата передачи курьеру</th>
+          {% if selected_state == "READY" %}
+            <th class="py-2 px-4">Накладная</th>
+          {% endif %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for order in orders %}
+        <tr class="border-t hover:bg-gray-50 cursor-pointer"
+            data-order='{{ order.full | tojson | safe }}'
+            onclick="openModalFromElement(this)">
+          <td class="py-2 px-4 text-blue-600 underline">{{ order.code }}</td>
+          <td class="py-2 px-4">{{ order.delivery_type }}</td>
+          <td class="py-2 px-4">{{ order.courier_date | datetimeformat }}</td>
+      {% if selected_state == "READY" %}
+        <td class="py-2 px-4">
+          <a href="{{ url_for('download_waybill_route', order_code=order.code) }}"
+            class="text-sm bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded flex items-center justify-center">
+            📄 Скачать Накладную
+          </a>
+        </td>
+      {% endif %}
+
+
+
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="4" class="py-4 px-4 text-center text-gray-400">Заказы не найдены</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Скрипт генерации Waybill -->
+<script>
+  async function generateWaybill(orderId) {
+    const confirmed = confirm("Сформировать накладную?");
+    if (!confirmed) return;
+
+    const response = await fetch("/api/generate_waybill", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ order_id: orderId, number_of_space: 1 })
+    });
+
+    const result = await response.json();
+    alert(result.success ? "Накладная создана!" : "Ошибка: " + result.error);
+    if (result.success) location.reload();
+  }
+console.log("Сформировать накладную для заказа:", orderId);
+
+</script>
+{% endblock %}

@@ -1,0 +1,1135 @@
+{% extends "base.html" %}
+{% block title %}Бот{% endblock %}
+
+{% block content %}
+<svg style="display: none;">
+  <symbol id="arrow-double" viewBox="-73.9 -55.3 135.9 85.4">
+    <g>
+      <polygon points="-73.9,29.1 -6,-9.2 61.9,30.1 61.9,14.2 -6,-25.1 -73.9,14.2"/>
+    </g>
+    <g>
+      <polygon points="-73.9,-1 -6,-39.3 61.9,0 61.9,-16 -6,-55.3 -73.9,-16"/>
+    </g>
+  </symbol>
+</svg>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333; margin: 0; padding: 0; }
+        header { background-color: #e4002b; color: white; padding: 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo-placeholder { font-size: 1rem; font-weight: bold; width: 10px; }
+        .logout-link { color: white; text-decoration: none; font-size: 0.9rem; cursor: pointer; }
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        h1 { font-size: 2rem; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); }
+        th, td { padding: 12px; border: 1px solid #dee2e6; text-align: left; }
+        th { background-color: #f1f1f1; font-weight: 600; }
+        input[type="text"] { width: 80px; padding: 6px; border: 1px solid #ccc; border-radius: 4px; }
+        button { margin-top: 20px; background-color: #e4002b; color: white; border: none; padding: 10px 18px; border-radius: 4px; font-size: 1rem; cursor: pointer; transition: background 0.3s ease; }
+        button:hover { background-color: #c80026; }
+        ul { list-style: none; padding: 0; }
+        li.success { color: green; }
+        li.error { color: red; }
+        .messages { margin-bottom: 20px; }
+        a { text-decoration: none; color: #e4002b; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+        strong { margin: 0 5px; color: black; }
+        .btn_save { align-items: center; justify-content: center; display: flex; }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+          
+            border-radius: 8px;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .modal-content button {
+            background-color: #e4002b;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            margin-top: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #c80026;
+        }
+        .image-wrapper {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            border-radius: 4px;
+            background-color: #e0e0e0;
+        }
+
+        .image-wrapper.shimmer::after {
+            content: "";
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            100% { left: 100%; }
+        }
+
+        .product-image {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .product-image.loaded {
+            opacity: 1;
+        }
+        .dropdown-toggle {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.filter-block {
+    position: relative;
+    width: 240px;
+    font-size: 0.95rem;
+}
+
+.filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.filter-block {
+  position: relative;
+  width: 240px;
+  font-size: 0.95rem;
+}
+
+.dropdown-toggle {
+  padding: 10px 14px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-toggle:hover {
+  border-color: #999;
+  background-color: #fafafa;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  display: none;
+  z-index: 100;
+}
+
+.dropdown-list label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.dropdown-list input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #e4002b;
+}
+
+.dropdown-arrow {
+  width: 18px;
+  height: 18px;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  fill: #666;
+  transform: rotate(180deg);  
+}
+
+.dropdown-toggle.open .dropdown-arrow {
+  transform: rotate(0deg);    
+}
+
+.top-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start; /* или space-between — если хочешь растянуть */
+  margin-bottom: 0px;
+}
+
+table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #f6f6f6;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+td input[type="text"] {
+  width: 80px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fafafa;
+  font-size: 0.95rem;
+}
+
+td .price-cell {
+  font-weight: bold;
+  color: #222;
+}
+
+td .model-name {
+  font-weight: 600;
+  color: #c80026;
+}
+
+td a {
+  color: #c80026;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+.image-wrapper {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  background-color: #f0f0f0;
+}
+#product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+}
+
+.product-header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.product-photo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+}
+
+.product-info {
+  flex-grow: 1;
+}
+
+.product-title {
+  font-weight: bold;
+  color: #004d99;
+  text-decoration: none;
+}
+
+.product-title:hover {
+  text-decoration: underline;
+}
+
+.product-meta {
+  color: #777;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.product-details .column {
+  flex: 1 1 140px;
+}
+
+.product-details input[type="text"] {
+  width: 80px;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.plain-outline-button {
+  width: 100%;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.plain-outline-button:hover {
+  border-color: #999;
+}
+
+#addProductModal input,
+#addProductModal textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#addProductModal textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+</style>
+    </style>
+    <link rel="icon" href="/lkw_ico.png" type="image/x-icon">
+
+<body>
+
+
+
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="messages">
+                <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <h1>Kaspi Прайс</h1>
+
+    {% if session.get('kaspi_email') %}
+<div style="margin: 20px 0; text-align: left;">
+  <form action="{{ url_for('download_xml') }}" method="post" style="display: inline;">
+    <button type="submit" style="
+      padding: 10px 18px;
+      background: #e4002b;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    ">
+      Загрузить прайс (XML)
+    </button>
+  </form>
+</div>
+
+
+
+<!-- <p style="text-align: center;">{{ 'Репрайсер работает (обновление каждые 3 минуты)' if repricer_running else 'Репрайсер остановлен' }}</p> -->
+
+        <!-- <form action="{{ url_for('toggle_repricer') }}" method="post" style="text-align: center; margin: 20px;">
+        <button type="submit">{{ 'Остановить репрайсер' if repricer_running else 'Включить репрайсер' }}</button>
+    </form> -->
+<div id="loadingMessages" style="display: none; text-align: center; font-size: 1.1rem; margin: 20px 0; color: #555;"></div>
+    {% if uploaded %}
+    <form method="POST" action="{{ url_for('save') }}">
+        <!-- ФИЛЬТРЫ -->
+         <!-- <button id="openAddProductModal" class="btn_save">➕ Добавить товар</button> -->
+
+<div class="top-controls">
+  <!-- Поиск -->
+   
+<div style="margin-bottom: 20px; ">
+    <input type="text" id="searchInput" placeholder="Поиск по SKU или модели" style="padding: 8px; width: 300px; border-radius: 4px; border: 1px solid #ccc;">
+</div>
+
+
+  <!-- Блок фильтров -->
+  <div class="filter-section">
+    <div class="filter-block">
+      <div class="dropdown-toggle" id="categoryToggle">
+        Категории
+        <svg class="dropdown-arrow" viewBox="0 0 154 109">
+          <use href="#arrow-double"></use>
+        </svg>
+      </div>
+      <div id="categoryDropdown" class="dropdown-list"></div>
+    </div>
+
+    <div class="filter-block">
+      <div class="dropdown-toggle" id="brandToggle">
+        Бренды
+        <svg class="dropdown-arrow" viewBox="0 0 154 109">
+          <use href="#arrow-double"></use>
+        </svg>
+      </div>
+      <div id="brandDropdown" class="dropdown-list"></div>
+      
+    </div>
+    <div class="filter-block">
+  <div class="dropdown-toggle" id="actionsToggle">
+    <span id="currentActionLabel">На продаже (0)</span>
+    <svg class="dropdown-arrow" viewBox="0 0 154 109">
+      <use href="#arrow-double"></use>
+    </svg>
+  </div>
+  <div id="actionsDropdown" class="dropdown-list">
+    <button id="btnShowOnSale" class="plain-outline-button">
+      На продаже (0)
+    </button>
+    <button id="btnShowRemoved" class="plain-outline-button">
+  Сняты с продажи (0)
+</button>
+
+  </div>
+  </div>
+
+</div>
+
+
+  <!-- Кнопка -->
+  <div style="display: flex; justify-content: flex-end; margin-bottom: 0px;">
+
+    </div>
+
+
+
+</div>
+
+
+<div id="product-list">
+</div>
+        </table>
+        <div id="pagination-controls" style="margin-top: 20px; text-align: center;">
+        <button id="prevPageBtn">Назад</button>
+        <span id="currentPage">1</span> / <span id="totalPages">{{ pages }}</span>
+        <button id="nextPageBtn">Вперёд</button>
+         </div>
+
+    </form>
+    {% endif %}
+    {% endif %}
+   
+</div>    
+</div>
+
+<div id="selectedActionBar" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 1px solid #ccc; padding: 10px 20px; justify-content: space-between; align-items: center; box-shadow: 0 -2px 6px rgba(0,0,0,0.1); z-index: 1000;">
+    <div id="selectedCountText">Выбрано товаров: 0</div>
+    <button id="removeSelectedBtn" class="btn_save">Снять с продажи</button>
+</div>
+
+
+
+
+
+<div id="overlay" style="
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  color: white;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+">
+  ⏳ Пожалуйста, подождите...<br>Товары обрабатываются
+</div>
+<div id="addProductModal" class="modal">
+  <div class="modal-content" style="width: 100%; max-width: 500px;">
+    <h2 style="margin-top: 0; margin-bottom: 16px;">Добавление товара</h2>
+    <form id="addProductForm" enctype="multipart/form-data" style="display: flex; flex-direction: column; gap: 12px;">
+      <input type="text" name="sku" placeholder="Артикул (sku)" required>
+      <input type="text" name="title" placeholder="Название товара" required>
+      <input type="text" name="brand" placeholder="Бренд" required>
+      <datalist id="categoryList"></datalist>
+<input type="text" name="category" placeholder="Код категории" list="categoryList" required>
+
+      <textarea name="description" placeholder="Описание товара" required></textarea>
+      
+      <div style="display: flex; gap: 10px;">
+        <input type="text" name="attribute_code" placeholder="Код атрибута" style="flex: 1;">
+        <input type="text" name="attribute_value" placeholder="Значение атрибута" style="flex: 1;">
+      </div>
+
+      <label style="font-weight: 600;">Изображение:</label>
+      <input type="file" id="imageInput" accept="image/*">
+      <img id="previewImage" style="max-width: 100%; max-height: 160px; display: none; border: 1px solid #ddd; border-radius: 4px;"/>
+
+      <button type="submit" class="btn_save">Загрузить товар</button>
+      <button type="button" onclick="closeAddProductModal()" style="background: #ccc; color: black;">Отмена</button>
+    </form>
+  </div>
+</div>
+<div id="progressModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); z-index: 9999; display: flex; align-items: center; justify-content: center;">
+  <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; max-width: 300px; width: 100%;">
+    <div style="font-size: 1.2rem; margin-bottom: 15px;">⏳ Загрузка прайса...</div>
+    <div style="width: 100%; background: #eee; border-radius: 10px; overflow: hidden;">
+      <div id="progressBar" style="width: 0%; height: 20px; background: #e4002b; transition: width 0.3s;"></div>
+    </div>
+    <div id="progressPercent" style="margin-top: 10px; font-size: 1rem;">0%</div>
+  </div>
+</div>
+
+
+<script>
+let filterRemovedOnly = false;
+let currentPage = 1;
+const perPage = 20;
+let filterOnSaleOnly = false;
+let fullProductList = [];
+let filteredList = [];
+const localProductMap = new Map();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPageSpan = document.getElementById('currentPage');
+  const totalPagesSpan = document.getElementById('totalPages');
+  const prevBtn = document.getElementById('prevPageBtn');
+  const nextBtn = document.getElementById('nextPageBtn');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const saveBtn = document.getElementById('saveBtn');
+  const searchInput = document.getElementById('searchInput');
+  const container = document.querySelector('.top-controls');
+
+  const selectAllBox = document.createElement('div');
+  selectAllBox.style.cssText = 'margin-bottom: 15px;';
+  selectAllBox.innerHTML = `<input type="checkbox" id="selectAllGlobal" title="Выбрать все товары">`;
+  if (container) container.prepend(selectAllBox);
+
+  document.getElementById('selectAllGlobal')?.addEventListener('change', e => {
+    const checked = e.target.checked;
+    fullProductList.forEach(p => {
+      p.selected = checked;
+      updateServer(p.sku, 'selected', checked);
+    });
+    document.querySelectorAll('.product-card input.select_item').forEach(cb => {
+      cb.checked = checked;
+    });
+  });
+
+  const btnShowOnSale = document.getElementById('btnShowOnSale');
+  if (btnShowOnSale) {
+    btnShowOnSale.addEventListener('click', (e) => {
+      e.preventDefault();
+      filterOnSaleOnly = true;
+      filterRemovedOnly = false;
+      applyFilters();
+      btnShowOnSale.classList.add('active');
+      btnShowRemoved.classList.remove('active');
+    });
+  }
+  
+
+  prevBtn?.addEventListener('click', () => {
+    if (currentPage > 1) loadPage(currentPage - 1);
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    const total = Math.ceil(filteredList.length / perPage);
+    if (currentPage < total) loadPage(currentPage + 1);
+  });
+
+  searchInput?.addEventListener('input', applyFilters);
+
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      fetch('/save', { method: 'POST' })
+        .then(() => {
+          alert('Сохранено!');
+          setTimeout(() => loadDataAndPage(currentPage), 300);
+        })
+        .catch(err => {
+          console.error('Ошибка при сохранении:', err);
+          alert('Ошибка при сохранении');
+        });
+    });
+  }
+
+document.getElementById('openAddProductModal')?.addEventListener('click', () => {
+  document.getElementById('addProductModal').style.display = 'flex';
+});
+
+function closeAddProductModal() {
+  document.getElementById('addProductModal').style.display = 'none';
+}
+
+document.getElementById('imageInput')?.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  const preview = document.getElementById('previewImage');
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      preview.src = ev.target.result;
+      preview.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  } else {
+    preview.src = '';
+    preview.style.display = 'none';
+  }
+});
+
+
+
+
+
+document.getElementById('addProductForm')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const fileInput = document.getElementById('imageInput');
+  const file = fileInput.files[0];
+
+  if (!file) {
+    alert("Загрузите изображение");
+    return;
+  }
+
+  // Загружаем изображение (в твоей логике ты можешь сохранить на сервере или использовать base64 или CDN)
+  const reader = new FileReader();
+  reader.onload = async () => {
+    const base64Image = reader.result;
+
+    const payload = {
+      sku: form.sku.value,
+      title: form.title.value,
+      brand: form.brand.value,
+      category: form.category.value,
+      description: form.description.value,
+      attributes: [{
+        code: form.attribute_code.value,
+        value: form.attribute_value.value
+      }],
+      images: [{ url: base64Image }]  // ты можешь потом сохранить это и выдать URL
+    };
+
+    const res = await fetch('/api/add_product', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await res.json();
+    alert(data.status || data.error || 'Готово');
+    if (data.status === 'ok') {
+      closeAddProductModal();
+    }
+  };
+
+  reader.readAsDataURL(file);
+});
+
+
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      try {
+        const res = await fetch('/logout', { method: 'GET' });
+        if (res.redirected) {
+          const modal = document.getElementById('logoutModal');
+          if (modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+          }
+        }
+      } catch (err) {
+        alert('Ошибка при выходе');
+      }
+    });
+  }
+btnShowRemoved.addEventListener('click', (e) => {
+  e.preventDefault();
+  filterRemovedOnly = true;
+  filterOnSaleOnly = false;
+  applyFilters();
+  btnShowRemoved.classList.add('active');
+  btnShowOnSale.classList.remove('active');
+});
+
+
+  document.addEventListener('click', (e) => {
+    const toggle = e.target.closest('.dropdown-toggle');
+    const allDropdowns = document.querySelectorAll('.dropdown-list');
+    const allToggles = document.querySelectorAll('.dropdown-toggle');
+
+    if (toggle) {
+      const isOpen = toggle.classList.contains('open');
+      allDropdowns.forEach(d => d.style.display = 'none');
+      allToggles.forEach(t => t.classList.remove('open'));
+
+      if (!isOpen) {
+        toggle.classList.add('open');
+        const dropdown = toggle.nextElementSibling;
+        if (dropdown) dropdown.style.display = 'block';
+      }
+      return;
+    }
+
+    if (!e.target.closest('.dropdown-list')) {
+      allDropdowns.forEach(d => d.style.display = 'none');
+      allToggles.forEach(t => t.classList.remove('open'));
+    }
+  });
+  // ✅ Включаем фильтр "На продаже" по умолчанию
+  filterOnSaleOnly = true;
+  document.getElementById('btnShowOnSale')?.classList.add('active');
+
+  loadDataAndPage().then(() => {
+    applyFilters();
+  });
+
+});
+
+function updateOnSaleCount(list) {
+  const saleCount = list.filter(p => p.price && parseInt(p.price) > 0 && !p.removed).length;
+  const removedCount = list.filter(p => p.removed === true).length;
+
+  document.getElementById('currentActionLabel').textContent = `На продаже (${saleCount})`;
+  document.getElementById('btnShowOnSale').textContent = `На продаже (${saleCount})`;
+  document.getElementById('btnShowRemoved').textContent = `Сняты с продажи (${removedCount})`;
+}
+
+
+function loadDataAndPage(page = 1) {
+  return fetch('/api/products')
+    .then(res => res.json())
+    .then(data => {
+      fullProductList = data;
+      filteredList = [...fullProductList];
+      populateFilters(fullProductList);
+      updateOnSaleCount(fullProductList);
+      loadPage(page);
+      stopLoadingMessages();
+    })
+    .catch(err => {
+      console.error('Ошибка загрузки прайса:', err);
+      stopLoadingMessages();
+    });
+}
+
+function loadPage(page) {
+  const start = (page - 1) * perPage;
+  const end = start + perPage;
+  const pageItems = filteredList.slice(start, end);
+
+  const listContainer = document.getElementById('product-list');
+  if (!listContainer) return;
+  listContainer.innerHTML = '';
+
+  const fallbackImg = "/static/no-photo.png";
+
+  pageItems.forEach(product => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.style.display = 'flex';
+
+    card.innerHTML = `
+      <div style="display: flex; align-items: center; padding-right: 10px;">
+      <input type="checkbox" class="select_item" ${product.selected === true ? 'checked' : ''}>
+
+      </div>
+      <div style="flex-grow: 1;">
+        <div class="product-header">
+          <img class="product-photo" src="${product.image || fallbackImg}" onerror="this.onerror=null;this.src='${fallbackImg}'">
+          <div class="product-info">
+            ${product.link
+              ? `<a class="product-title" href="${product.link}" target="_blank">${product.model}</a>`
+              : `<div class="product-title">${product.model}</div>`}
+            <div class="product-meta">Категория: ${product.category || '—'}<br>Артикул: ${product.sku}</div>
+          </div>
+        </div>
+        <div class="product-details">
+          <div class="column">1-я цена: ${product.first_price || '—'} ₸</div>
+          <div class="column">Позиция: ${product.position || '—'}</div>
+          <div class="column">Цена: ${product.price || '—'} ₸</div>
+          <div class="column">Шаг: <input type="text" class="step_input" value="${product.step || ''}"></div>
+          <div class="column">Мин: <input type="text" class="min_input" value="${product.min || ''}"></div>
+          <div class="column">Макс: <input type="text" class="max_input" value="${product.max || ''}"></div>
+          <div class="column" style="text-align: left;">
+            <label style="display: inline-flex; align-items: center; gap: 6px;">
+              <input type="checkbox" class="auto_down" ${product.auto_down === true ? 'checked' : ''}> Автоснижение
+            </label><br>
+            <label style="display: inline-flex; align-items: center; gap: 6px;">
+              <input type="checkbox" class="auto_up" ${product.auto_up === true ? 'checked' : ''}> Автоповышение
+            </label>
+          </div>
+        </div>
+      </div>
+    `;
+
+    listContainer.appendChild(card);
+
+    card.querySelector('.step_input')?.addEventListener('input', e => updateServer(product.sku, 'step', e.target.value));
+    card.querySelector('.min_input')?.addEventListener('input', e => updateServer(product.sku, 'min', e.target.value));
+    card.querySelector('.max_input')?.addEventListener('input', e => updateServer(product.sku, 'max', e.target.value));
+    
+    card.querySelector('.select_item')?.addEventListener('change', e => {
+      product.selected = e.target.checked;  // <== ЭТО ГЛАВНОЕ
+      updateServer(product.sku, 'selected', e.target.checked);
+      updateSelectedBar();
+    });
+
+    card.querySelector('.auto_down')?.addEventListener('change', e => updateServer(product.sku, 'auto_down', e.target.checked));
+    card.querySelector('.auto_up')?.addEventListener('change', e => updateServer(product.sku, 'auto_up', e.target.checked));
+  });
+
+  currentPage = page;
+  document.getElementById('currentPage').textContent = currentPage;
+  document.getElementById('totalPages').textContent = Math.ceil(filteredList.length / perPage);
+}
+
+
+function updateServer(sku, key, value) {
+  if (!sku) return;
+  if (!localProductMap.has(sku)) localProductMap.set(sku, {});
+  localProductMap.get(sku)[key] = value;
+
+  fetch('/api/update_field', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ sku, key, value })
+  }).then(() => {
+    autoSaveDelay();
+  }).catch(err => console.error('Ошибка обновления поля', err));
+}
+
+function autoSaveDelay() {
+  clearTimeout(window.autoSaveTimer);
+  window.autoSaveTimer = setTimeout(() => {
+    fetch('/save', { method: 'POST' })
+      .then(() => console.log('✅ Автосохранение вызвано'))
+      .catch(err => console.error('❌ Автосохранение не удалось:', err));
+  }, 1000);
+}
+
+function applyFilters() {
+  const query = document.getElementById('searchInput')?.value.toLowerCase() || '';
+  const selectedCats = [...document.querySelectorAll('.cat-check:checked')].map(cb => cb.value);
+  const selectedBrands = [...document.querySelectorAll('.brand-check:checked')].map(cb => cb.value);
+
+  filteredList = fullProductList.filter(p => {
+    const matchSearch = (p.sku?.toLowerCase().includes(query) || p.model?.toLowerCase().includes(query));
+    const matchCat = selectedCats.length === 0 || selectedCats.includes(p.category);
+    const matchBrand = selectedBrands.length === 0 || selectedBrands.includes(p.brand);
+const matchSale = !filterOnSaleOnly || (p.price && parseInt(p.price) > 0 && !p.removed);
+
+    const matchRemoved = !filterRemovedOnly || p.removed === true;
+
+    return matchSearch && matchCat && matchBrand && matchSale && matchRemoved;
+  });
+
+  loadPage(1);
+}
+
+function populateFilters(list) {
+  const catDropdown = document.getElementById('categoryDropdown');
+  const brandDropdown = document.getElementById('brandDropdown');
+  if (!catDropdown || !brandDropdown) return;
+
+  const catSet = new Set();
+  const brandSet = new Set();
+
+  list.forEach(p => {
+    if (p.category) catSet.add(p.category);
+    if (p.brand) brandSet.add(p.brand);
+  });
+
+  catDropdown.innerHTML = '';
+  brandDropdown.innerHTML = '';
+
+  [...catSet].sort().forEach(cat => {
+    catDropdown.innerHTML += `<label><input type="checkbox" class="cat-check" value="${cat}"> ${cat}</label>`;
+  });
+  [...brandSet].sort().forEach(brand => {
+    brandDropdown.innerHTML += `<label><input type="checkbox" class="brand-check" value="${brand}"> ${brand}</label>`;
+  });
+
+  document.querySelectorAll('.cat-check').forEach(cb => cb.addEventListener('change', applyFilters));
+  document.querySelectorAll('.brand-check').forEach(cb => cb.addEventListener('change', applyFilters));
+}
+
+const loadingMessages = ["Загружаем прайс...", "Почти готово...", "Секундочку...", "Подгружаем товары..."];
+let loadingInterval;
+
+function startLoadingMessages() {
+  const container = document.getElementById("loadingMessages");
+  if (!container) return;
+  container.style.display = 'block';
+  let index = 0;
+  container.textContent = loadingMessages[index];
+  loadingInterval = setInterval(() => {
+    index = (index + 1) % loadingMessages.length;
+    container.textContent = loadingMessages[index];
+  }, 2500);
+}
+
+document.querySelector('input[name="category"]')?.addEventListener('focus', async function () {
+  const list = document.getElementById('categoryList');
+  if (list.children.length > 0) return; // Уже загружены
+
+  try {
+    const res = await fetch('/api/kaspi/categories');
+    const data = await res.json();
+
+    if (!Array.isArray(data)) return;
+    list.innerHTML = '';
+
+    for (const cat of data) {
+      const option = document.createElement('option');
+      option.value = cat.code;
+      option.text = cat.title;
+      list.appendChild(option);
+    }
+  } catch (err) {
+    alert("Ошибка загрузки категорий");
+  }
+});
+
+
+function stopLoadingMessages() {
+  clearInterval(loadingInterval);
+  const container = document.getElementById("loadingMessages");
+  if (container) container.style.display = 'none';
+}
+
+document.getElementById('removeSelectedBtn')?.addEventListener('click', () => {
+    const selected = fullProductList.filter(p => p.selected).map(p => p.sku);
+    if (selected.length === 0) return;
+
+    const url = filterRemovedOnly ? '/restore_to_sale' : '/remove_from_sale';
+    const confirmText = filterRemovedOnly ? 'Выставить на продажу?' : 'Снять с продажи?';
+
+    if (!confirm(confirmText)) return;
+
+    // ⏳ Показываем overlay
+    const overlay = document.getElementById('overlay');
+    if (overlay) overlay.style.display = 'flex';
+
+    fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ skus: selected })
+    })
+    .then(res => {
+        if (!res.ok) {
+            return res.json().then(err => {
+                throw new Error(err.error || 'Ошибка при выполнении действия');
+            });
+        }
+        return res.json();
+    })
+    .then(() => {
+        alert(filterRemovedOnly ? 'Товары выставлены на продажу' : 'Снятие с продажи завершено');
+        fullProductList.forEach(p => p.selected = false);
+        updateSelectedBar();
+        loadPage(currentPage);
+    })
+    .catch(err => {
+        alert(err.message);
+    })
+    .finally(() => {
+        if (overlay) overlay.style.display = 'none';
+    });
+});
+
+
+
+
+
+function updateSelectedBar() {
+    const selected = fullProductList.filter(p => p.selected);
+    const bar = document.getElementById('selectedActionBar');
+    const countText = document.getElementById('selectedCountText');
+    const actionBtn = document.getElementById('removeSelectedBtn');
+
+    bar.style.display = selected.length > 0 ? 'flex' : 'none';
+    countText.textContent = `Выбрано товаров: ${selected.length}`;
+
+    if (filterRemovedOnly) {
+        actionBtn.textContent = 'Выставить на продажу';
+    } else {
+        actionBtn.textContent = 'Снять с продажи';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const downloadForm = document.getElementById('downloadXmlForm');
+  if (downloadForm) {
+    downloadForm.addEventListener('submit', function (e) {
+      e.preventDefault();  // Отменяем стандартную отправку
+
+      const modal = document.getElementById('progressModal');
+      const bar = document.getElementById('progressBar');
+      const percent = document.getElementById('progressPercent');
+
+      if (modal && bar && percent) {
+        modal.style.display = 'flex';
+        let p = 0;
+        const interval = setInterval(() => {
+          p += Math.random() * 10;
+          if (p >= 99) {
+            p = 99;
+            clearInterval(interval);
+          }
+          bar.style.width = p + "%";
+          percent.textContent = Math.floor(p) + "%";
+        }, 300);
+      }
+
+      fetch(downloadForm.action, {
+        method: 'POST',
+        body: new FormData(downloadForm)
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Ошибка загрузки прайса');
+          }
+          return response.text();
+        })
+        .then(() => {
+          window.location.reload();
+        })
+        .catch(err => {
+          alert(err.message);
+          if (modal) modal.style.display = 'none';
+        });
+    });
+  }
+
+  // Скрываем прогресс-бар при загрузке страницы
+  const modal = document.getElementById('progressModal');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+});
+
+</script>
+
+<style>
+button.plain-outline-button.active {
+  background-color: #e4002b;
+  color: white;
+  border-color: #e4002b;
+}
+</style>
+{% if not session.get('kaspi_email') %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById('kaspiModal');
+    if (modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  });
+
+
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const categoryInput = document.querySelector('input[name="category"]');
+  const categoryList = document.getElementById('categoryList');
+
+  categoryInput?.addEventListener('focus', async () => {
+    if (categoryList.children.length > 0) return;
+
+    try {
+      const res = await fetch('/api/kaspi/categories');
+      const data = await res.json();
+
+      categoryList.innerHTML = '';
+
+      data.forEach(cat => {
+        const opt = document.createElement('option');
+        opt.value = cat.code;
+        opt.text = cat.title;
+        categoryList.appendChild(opt);
+      });
+    } catch (err) {
+      console.error("Ошибка загрузки категорий:", err);
+      alert("Ошибка загрузки категорий");
+    }
+  });
+});
+</script>
+
+{% endif %}
+{% endblock %}

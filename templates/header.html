@@ -1,0 +1,193 @@
+
+<!-- Мобильная шапка -->
+<div class="md:hidden flex items-center justify-between px-4 py-3 bg-white shadow fixed top-0 left-0 right-0 z-50">
+  <img src="{{ url_for('static', filename='lkw_ico.png') }}" class="h-8" alt="Логотип">
+
+  <button onclick="toggleMobileMenu()" class="flex flex-col justify-center items-center w-10 h-10 gap-1 group">
+    <span class="block w-6 h-0.5 bg-black rounded transition-all duration-300 group-hover:bg-red-600"></span>
+    <span class="block w-6 h-0.5 bg-black rounded transition-all duration-300 group-hover:bg-red-600"></span>
+    <span class="block w-6 h-0.5 bg-black rounded transition-all duration-300 group-hover:bg-red-600"></span>
+  </button>
+</div>
+
+
+<!-- 📱 Мобильное меню -->
+<div id="mobile-menu"
+     class="hidden md:hidden fixed top-14 left-0 right-0 bottom-0 bg-white z-40 shadow px-4 py-4 overflow-y-auto max-h-[calc(100vh-56px)]">
+  <nav class="flex flex-col gap-4 text-sm">
+    <a href="{{ url_for('landing') }}" class="nav-link">Главная</a>
+    <a href="{{ url_for('index') }}" class="nav-link">Бот</a>
+    <a href="{{ url_for('nomenclature_page') }}" class="nav-link">Номенклатура</a>
+    <a href="{{ url_for('orders_page') }}" class="nav-link">Заказы</a>
+    <a href="{{ url_for('tarify') }}" class="nav-link">Тарифы</a>
+    <a href="{{ url_for('settings') }}" class="nav-link">Настройка магазина</a>
+    <a href="{{ url_for('logout') }}" class="auth-button outlined">Выйти</a>
+  </nav>
+</div>
+
+<!-- 💻 Сайдбар для десктопа -->
+<aside class="hidden md:flex flex-col w-[240px] h-screen bg-white shadow px-4 py-6 fixed top-0 left-0 z-50 font-inter">
+
+  <!-- Лого -->
+<div class="mb-8 flex justify-center">
+  <!-- <img src="{{ url_for('static', filename='lkwlogodark.png') }}" alt="Логотип" class="h-12"> -->
+</div>
+
+  {% if session.get('register_email') %}
+<nav class="flex flex-col text-sm h-full">
+  <div class="flex flex-col gap-2">
+       <a href="{{ url_for('dashboard') }}" class="nav-link {% if request.path == url_for('dashboard') %}active{% endif %}">Моя компания</a>
+    <!-- <a href="{{ url_for('landing') }}" class="nav-link {% if request.path == url_for('landing') %}active{% endif %}">Главная</a> -->
+
+        <!-- Kaspi CRM блок -->
+<div class="flex flex-col items-center w-full gap-1">
+  <div id="crm-toggle"
+       class="nav-link cursor-pointer w-full text-center"
+       onclick="toggleCrmSubmenu()">
+    CRM система
+  </div>
+  <div id="crm-submenu"
+       class="hidden flex flex-col w-full bg-[#f9f9f9] rounded-md py-2">
+    <a href="{{ url_for('orders_page') }}"
+       class="nav-link {% if '/orders' in request.path %}active{% endif %}">Заказы</a>
+           <a href="{{ url_for('orders_page') }}"
+       class="nav-link {% if '/orders' in request.path %}active{% endif %}">Расходы</a>
+    <a href="{{ url_for('payroll_home') }}"
+      class="nav-link {% if '/payroll' in request.path %}active{% endif %}">Заработная плата</a>
+
+             <a href="{{ url_for('orders_page') }}"
+       class="nav-link {% if '/orders' in request.path %}active{% endif %}">Планировщик</a>
+       
+  </div>
+</div>
+
+
+
+
+
+      <a href="{{ url_for('settings') }}" class="nav-link {% if request.path == url_for('settings') %}active{% endif %}">Рассылка </a>
+      <a href="{{ url_for('nomenclature_page') }}" class="nav-link {% if request.path == url_for('nomenclature_page') %}active{% endif %}">Номенклатура</a>
+          <a href="{{ url_for('tarify') }}" class="nav-link {% if request.path == url_for('tarify') %}active{% endif %}">Тарифные планы</a>
+           <a href="{{ url_for('settings') }}" class="nav-link {% if request.path == url_for('settings') %}active{% endif %}">Заказать Курьера </a>
+              <a href="{{ url_for('settings') }}" class="nav-link {% if request.path == url_for('settings') %}active{% endif %}">Ваш помощник ИИ </a>
+    <a href="{{ url_for('settings') }}" class="nav-link {% if request.path == url_for('settings') %}active{% endif %}">Настройки магазина</a>
+
+                <a href="{{ url_for('index') }}" class="nav-link {% if request.path == url_for('index') %}active{% endif %}">Управление товарами</a>
+                    <a href="{{ url_for('settings') }}" class="nav-link {% if request.path == url_for('settings') %}active{% endif %}">Обратная связь</a>
+  </div>
+
+  <!-- Кнопка "Выйти" прибита к низу -->
+  <div class="mt-auto pt-6">
+    <a href="{{ url_for('logout') }}" class="auth-button outlined w-full block text-center">Выйти</a>
+  </div>
+</nav>
+
+  {% endif %}
+</aside>
+
+<!-- 🎨 Стили (оставлены как есть) -->
+<style>
+.nav-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-link.active {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+
+  .nav-link.sub-active {
+    background-color: #000000;
+    font-weight: 600;
+  }
+
+  .auth-button {
+    text-align: center;
+    text-decoration: none;
+    background-color: #e4002b;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .auth-button:hover {
+    background-color: #c80026;
+  }
+
+  .auth-button.outlined {
+    background-color: transparent;
+    color: #e4002b;
+    border: 1px solid #e4002b;
+  }
+
+  .auth-button.outlined:hover {
+    background-color: #e4002b;
+    color: white;
+  }
+
+  .font-inter {
+    font-family: 'Inter', Arial, sans-serif;
+  }
+  /* Подменю Kaspi CRM */
+#crm-submenu {
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  padding: 4px 0;
+  width: 100%;
+  margin-top: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+#crm-submenu .nav-link {
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#crm-submenu .nav-link:hover {
+  background-color: #ececec;
+}
+</style>
+
+<!-- 🔧 Скрипт: открыть/закрыть мобильное меню -->
+<script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("hidden");
+  }
+</script>
+<script>
+function toggleCrmSubmenu() {
+  const ids = ["crm-submenu", "crm-submenu-desktop", "crm-submenu-mobile"];
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle("hidden");
+  });
+}
+
+  // Автораскрытие если активный путь
+  document.addEventListener("DOMContentLoaded", () => {
+    const current = window.location.pathname;
+    if (current.includes("/orders") || current.includes("/orders")) {
+      document.getElementById("crm-submenu").classList.remove("hidden");
+      document.getElementById("crm-arrow").classList.add("rotate-180");
+    }
+  });
+</script>
